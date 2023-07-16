@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # Django Restframework apps
     'rest_framework',
     'rest_framework_simplejwt',
+    'rest_framework_swagger',
     # Django-CRM apps
     'accounts',
     'categories',
@@ -63,7 +64,7 @@ ROOT_URLCONF = 'config.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

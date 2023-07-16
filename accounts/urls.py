@@ -5,7 +5,7 @@ app_name = "accounts"
 
 accounts_api_router = SimpleRouter(trailing_slash=True)
 accounts_api_router.register(
-    prefix='accounts/api',
+    prefix='api',
     viewset=views.AccountAPIViewSet,
     basename='accounts-api'
 )
