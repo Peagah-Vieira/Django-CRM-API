@@ -28,6 +28,10 @@ urlpatterns = [
         include('users.urls'),
     ),
     path(
+        'categories/',
+        include('categories.urls'),
+    ),
+    path(
         'leads/',
         include('leads.urls'),
     ),
