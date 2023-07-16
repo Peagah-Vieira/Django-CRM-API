@@ -38,11 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # Django Restframework
+    # Django Restframework apps
     'rest_framework',
     'rest_framework_simplejwt',
     # Django-CRM apps
     'users'
+    'leads'
 ]
 
 MIDDLEWARE = [

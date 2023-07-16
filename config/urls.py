@@ -25,7 +25,11 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
     path(
         '',
-        include('users.urls')
+        include('users.urls'),
+    ),
+    path(
+        'leads/',
+        include('leads.urls'),
     ),
     path(
         'api/token/',
@@ -43,6 +47,7 @@ urlpatterns = [
         name='token_verify'
     ),
     path(
-        'admin/', admin.site.urls
+        'admin/',
+        admin.site.urls,
     ),
 ]
