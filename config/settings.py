@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     # Django-CRM apps
-    'users'
-    'leads'
+    'users',
+    'leads',
 ]
 
 MIDDLEWARE = [

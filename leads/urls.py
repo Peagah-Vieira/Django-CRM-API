@@ -5,7 +5,7 @@ app_name = "leads"
 
 leads_api_router = SimpleRouter(trailing_slash=True)
 leads_api_router.register(
-    prefix='leads/api',
+    prefix='api',
     viewset=views.LeadAPIViewSet,
     basename='leads-api'
 )
