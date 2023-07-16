@@ -25,7 +25,7 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
     path(
         '',
-        include('users.urls'),
+        include('accounts.urls'),
     ),
     path(
         'categories/',

@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt',
     # Django-CRM apps
-    'users',
+    'accounts',
     'categories',
     'agents',
     'leads',

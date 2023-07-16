@@ -3,11 +3,11 @@ from rest_framework.viewsets import ReadOnlyModelViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticated
-from .serializers import UserSerializer
+from .serializers import AccountSerializer
 
 
-class UserAPIViewSet(ReadOnlyModelViewSet):
-    serializer_class = UserSerializer
+class AccountAPIViewSet(ReadOnlyModelViewSet):
+    serializer_class = AccountSerializer
     permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
