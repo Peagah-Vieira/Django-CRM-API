@@ -1,6 +1,11 @@
-from django.http import HttpResponse
-# Create your views here.
+from django.contrib.auth.models import User
+from rest_framework.viewsets import ModelViewSet
+from .serializers import UserSerializer
 
 
-def login(request):
-    return HttpResponse('ok')
+class UserAPIViewSet(ModelViewSet):
+    serializer_class = UserSerializer
+
+    def get_queryset(self):
+        queryset = User.objects.all()
+        return queryset

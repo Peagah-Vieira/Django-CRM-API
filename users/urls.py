@@ -1,12 +1,13 @@
-from django.urls import path
+from rest_framework.routers import SimpleRouter
 from users import views
 
 app_name = "users"
 
-urlpatterns = [
-    path(
-        '',
-        views.login,
-        name='login'
-    ),
-]
+users_api_router = SimpleRouter(trailing_slash=True)
+users_api_router.register(
+    prefix='users/api',
+    viewset=views.UserAPIViewSet,
+    basename='users-api'
+)
+
+urlpatterns = users_api_router.urls
