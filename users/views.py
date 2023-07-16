@@ -1,11 +1,25 @@
-from django.contrib.auth.models import User
-from rest_framework.viewsets import ModelViewSet
+from django.contrib.auth import get_user_model
+from rest_framework.viewsets import ReadOnlyModelViewSet
+from rest_framework.response import Response
+from rest_framework.decorators import action
+from rest_framework.permissions import IsAuthenticated
 from .serializers import UserSerializer
 
 
-class UserAPIViewSet(ModelViewSet):
+class UserAPIViewSet(ReadOnlyModelViewSet):
     serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
-        queryset = User.objects.all()
+        User = get_user_model()
+        queryset = User.objects.filter(username=self.request.user.username)
         return queryset
+
+    @action(
+        methods=['get'],
+        detail=False,
+    )
+    def me(self, request, *args, **kwargs):
+        obj = self.get_queryset().first()
+        serializer = self.get_serializer(instance=obj)
+        return Response(serializer.data)
