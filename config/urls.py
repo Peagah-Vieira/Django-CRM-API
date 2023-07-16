@@ -32,6 +32,10 @@ urlpatterns = [
         include('categories.urls'),
     ),
     path(
+        'agents/',
+        include('agents.urls'),
+    ),
+    path(
         'leads/',
         include('leads.urls'),
     ),

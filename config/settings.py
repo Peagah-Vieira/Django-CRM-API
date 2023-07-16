@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # Django-CRM apps
     'users',
     'categories',
+    'agents',
     'leads',
 ]
 
