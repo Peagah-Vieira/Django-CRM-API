@@ -10,5 +10,20 @@ class LeadSerializer(serializers.ModelSerializer):
             'first_name',
             'last_name',
             'email',
-            'age',
+            'category',
+            'category_name',
+            'agent',
+            'agent_first_name',
+            'created_at',
+            'updated_at',
         ]
+
+    category_name = serializers.StringRelatedField(
+        source='category',
+        read_only=True,
+    )
+
+    agent_first_name = serializers.StringRelatedField(
+        source='agent',
+        read_only=True,
+    )
