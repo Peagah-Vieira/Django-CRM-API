@@ -1,25 +1,24 @@
-[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](https://github.com/Peagah-Vieira/Django-CRM-API/blob/main/README_BR.md)
-# Django Customer Relationship Management - API
+# Django Customer Relationship Management
 
-A REST API for [Django-CRM](https://github.com/Peagah-Vieira/Django-CRM).
+Uma API REST para [Django-CRM](https://github.com/Peagah-Vieira/Django-CRM).
 
-## Functionalities
+## Funcionalidades
 
-- JSON Web Token authentication with JWT
+- Autenticação JSON Web Token com JWT
 
-- Endpoints for each app
+- Endpoints para cada aplicativo
 
-- REST API documentation with Swagger
+- Documentação da API REST com Swagger
 
-## Running locally
+## Executando localmente
 
-Clone the project
+Clone o projeto
 
 ```bash
 git clone  https://github.com/Peagah-Vieira/Django-CRM-API
 ```
 
-Create a virtual environment
+Crie um ambiente virtual
 
 ```bash
 # Linux
@@ -36,19 +35,19 @@ py -3 -m venv .venv
 .venv\scripts\activate
 ```
 
-Update the pip
+Atualize o pip
 
 ```bash
 py -m pip install --upgrade pip
 ```
 
-Install the dependencies
+Instale as dependências
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Change environment variables
+Alterar variáveis ​​de ambiente
 
 ```bash
 # Django Configuration
@@ -66,29 +65,29 @@ Change environment variables
 # POSTGRES_PORT = "5432"
 ```
 
-Perform the migrations
+Realize as migrações
 
 ```bash
 py manage.py migrate
 ```
 
-Start the server
+Iniciar o servidor
 
 ```bash
 py manage.py runserver
 ```
 
-## Learnings
+## Aprendizados
 
-REST API documentation:
+Documentação da API REST:
 
 (https://www.django-rest-framework.org/topics/documenting-your-api/)
 
-JSON Web Token authentication:
+Autenticação do JSON Web Token:
 
 (https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
 
-## Documentation
+## Documentação
 
 [Python](https://www.python.org)
 
