@@ -12,3 +12,11 @@ class CategorySerializer(serializers.ModelSerializer):
             'created_at',
             'updated_at',
         ]
+
+    created_at = serializers.DateTimeField(
+        format="%d/%b/%Y",
+    )
+
+    updated_at = serializers.DateTimeField(
+        format="%d/%b/%Y",
+    )

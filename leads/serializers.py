@@ -27,3 +27,11 @@ class LeadSerializer(serializers.ModelSerializer):
         source='agent',
         read_only=True,
     )
+
+    created_at = serializers.DateTimeField(
+        format="%d/%b/%Y",
+    )
+
+    updated_at = serializers.DateTimeField(
+        format="%d/%b/%Y",
+    )
