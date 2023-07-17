@@ -20,6 +20,9 @@ class AccountAPIViewSet(ReadOnlyModelViewSet):
         detail=False,
     )
     def me(self, request, *args, **kwargs):
+        """
+            Returns the logged in user data.
+        """
         obj = self.get_queryset().first()
         serializer = self.get_serializer(instance=obj)
         return Response(serializer.data)
