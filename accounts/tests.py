@@ -35,17 +35,15 @@ class AccountsAPITest(test.APITestCase):
 
         return response.data.get('access')
 
-    def test_unauthorized_user_can_see_informations(self):
+    def test_unauthorized_user_cant_see_informations(self):
         me_url = reverse('accounts:accounts-api-me')
         response = self.client.get(me_url)
         self.assertEqual(response.status_code, 401)  # 401 = unauthorized
 
     def test_authorized_user_can_see_informations(self):
-        data = {}
         me_url = reverse('accounts:accounts-api-me')
         response = self.client.get(
             me_url,
-            data=data,
             HTTP_AUTHORIZATION=f'Bearer {self.get_jwt_access_token()}',
         )
         self.assertEqual(response.status_code, 200)

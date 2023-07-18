@@ -1,4 +1,5 @@
 from rest_framework.viewsets import ModelViewSet
+from rest_framework.permissions import IsAuthenticated
 from .models import Agent
 from .serializers import AgentSerializer
 
@@ -7,6 +8,7 @@ class AgentAPIViewSet(ModelViewSet):
     http_method_names = ['get', 'post', 'patch', 'delete']
     queryset = Agent.objects.all()
     serializer_class = AgentSerializer
+    permission_classes = [IsAuthenticated]
 
     def list(self, request, *args, **kwargs):
         """
