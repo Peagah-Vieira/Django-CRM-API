@@ -22,7 +22,7 @@ Crie um ambiente virtual
 
 ```bash
 # Linux
-sudo apt-get install python3-venv    
+sudo apt-get install python3-venv
 python3 -m venv .venv
 source .venv/bin/activate
 
@@ -47,22 +47,10 @@ Instale as dependências
 pip install -r requirements.txt
 ```
 
-Alterar variáveis ​​de ambiente
+Copie o arquivo env de exemplo e faça as alterações de configuração necessárias no arquivo .env
 
 ```bash
-# Django Configuration
-# SECRET_KEY = 'GENERATE A KEY'
-
-# JWT Configuration
-# JWT_SECRET_KEY = 'GENERATE A KEY'
-
-# PostgreSQL Local Configuration
-# DB_ENGINE = 'django.db.backends.postgresql'
-# POSTGRES_DB = "CHANGE-ME"
-# POSTGRES_USER = "CHANGE-ME"
-# POSTGRES_PASSWORD = "CHANGE-ME"
-# POSTGRES_HOST = "127.0.0.1"
-# POSTGRES_PORT = "5432"
+cp .env-example .env
 ```
 
 Realize as migrações

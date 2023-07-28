@@ -50,22 +50,10 @@ Install the dependencies
 pip install -r requirements.txt
 ```
 
-Change environment variables
+Copy the example env file and make the required configuration changes in the .env file
 
 ```bash
-# Django Configuration
-# SECRET_KEY = 'GENERATE A KEY'
-
-# JWT Configuration
-# JWT_SECRET_KEY = 'GENERATE A KEY'
-
-# PostgreSQL Local Configuration
-# DB_ENGINE = 'django.db.backends.postgresql'
-# POSTGRES_DB = "CHANGE-ME"
-# POSTGRES_USER = "CHANGE-ME"
-# POSTGRES_PASSWORD = "CHANGE-ME"
-# POSTGRES_HOST = "127.0.0.1"
-# POSTGRES_PORT = "5432"
+cp .env-example .env
 ```
 
 Perform the migrations
