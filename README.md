@@ -3,7 +3,9 @@
 ![Django 4.2](https://img.shields.io/badge/Django-4.2-green.svg)
 # Django Customer Relationship Management - API
 
-A REST API for [Django-CRM](https://github.com/Peagah-Vieira/Django-CRM).
+A customer relationship management API built using Django Rest Framework.
+
+[Django-CRM-Web-Application](https://github.com/Peagah-Vieira/Django-CRM-Web-Application)
 
 ## Functionalities
 

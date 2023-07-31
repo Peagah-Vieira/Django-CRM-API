@@ -1,6 +1,8 @@
 # Django Customer Relationship Management
 
-Uma API REST para [Django-CRM](https://github.com/Peagah-Vieira/Django-CRM).
+Uma API de gerenciamento de relacionamento com o cliente construída usando o Django Rest Framework.
+
+[Django-CRM-Web-Application](https://github.com/Peagah-Vieira/Django-CRM-Web-Application)
 
 ## Funcionalidades
 
